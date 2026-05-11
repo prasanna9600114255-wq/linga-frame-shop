@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation - Linga Frame Shop</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">🕉️ Linga Frame Shop</div>
+            <div class="nav-links">
+                <a href="/">Home</a>
+                <a href="shop.html">Shop</a>
+                <button class="btn-logout" onclick="logout()">Logout</button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="confirmation-section">
+        <div class="container">
+            <div class="confirmation-card">
+                <div class="success-icon">✅</div>
+                <h2>Order Confirmed!</h2>
+
+                <div class="confirmation-details">
+                    <div id="orderDetails">
+                        <p>Loading order details...</p>
+                    </div>
+                </div>
+
+                <div class="confirmation-info">
+                    <h3>What's Next?</h3>
+                    <ol>
+                        <li>✓ Your order has been received and confirmed</li>
+                        <li>📱 Admin will contact you on <strong id="adminPhone">+91 9600114255</strong></li>
+                        <li>📧 Confirmation email has been sent to your email address</li>
+                        <li>💳 Online payment is accepted across India.</li>
+                        <li>🛍️ Cash payment is available only in Puducherry.</li>
+                        <li>🎨 Your frame will be customized and shipped soon</li>
+                    </ol>
+                </div>
+
+                <div class="confirmation-buttons">
+                    <a href="shop.html" class="btn btn-primary">Place Another Order</a>
+                    <a href="/" class="btn btn-secondary">Return to Home</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Linga Frame Shop. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/confirmation.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Linga Frame Shop</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">🕉️ Linga Frame Shop</div>
+            <div class="nav-links">
+                <a href="/">Home</a>
+                <a href="login.html">Login</a>
+                <a href="register.html" class="active">Register</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="auth-section">
+        <div class="container">
+            <div class="auth-form-container">
+                <h2>Register Your Account</h2>
+                <form id="registerForm" class="auth-form">
+                    <div class="form-group">
+                        <label>Full Name *</label>
+                        <input type="text" id="name" required placeholder="Your full name">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Email *</label>
+                        <input type="email" id="email" required placeholder="your@email.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Phone Number *</label>
+                        <input type="tel" id="phone" required placeholder="Your phone number">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Account Type *</label>
+                        <select id="userType" required>
+                            <option value="">Select account type</option>
+                            <option value="customer">Customer</option>
+                            <option value="admin">Admin</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Password *</label>
+                        <input type="password" id="password" required placeholder="Create a password">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Confirm Password *</label>
+                        <input type="password" id="confirmPassword" required placeholder="Confirm password">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-full">Register</button>
+
+                    <p class="form-footer">
+                        Already have an account? <a href="login.html">Login here</a>
+                    </p>
+                </form>
+
+                <div id="message" class="message"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Linga Frame Shop. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/auth.js"></script>
+</body>
+
+</html>

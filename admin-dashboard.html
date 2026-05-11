@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Linga Frame Shop</title>
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">🕉️ Linga Frame Shop - Admin</div>
+            <div class="nav-links">
+                <span class="admin-name" id="adminName">Admin</span>
+                <button class="btn-logout" onclick="logout()">Logout</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="admin-wrapper">
+        <aside class="sidebar">
+            <ul class="sidebar-menu">
+                <li><a href="#" onclick="showSection('orders')" class="menu-item active">📦 All Orders</a></li>
+                <li><a href="#" onclick="showSection('pending')" class="menu-item">⏳ Pending Orders</a></li>
+                <li><a href="#" onclick="showSection('confirmed')" class="menu-item">✅ Confirmed Orders</a></li>
+                <li><a href="#" onclick="showSection('stats')" class="menu-item">📊 Statistics</a></li>
+            </ul>
+        </aside>
+
+        <main class="admin-content">
+            <section class="container">
+                <!-- Orders Section -->
+                <div id="orders-section" class="admin-section">
+                    <h2>All Orders</h2>
+                    <div id="ordersContainer" class="orders-table-wrapper">
+                        <p>Loading orders...</p>
+                    </div>
+                </div>
+
+                <!-- Pending Orders Section -->
+                <div id="pending-section" class="admin-section" style="display:none;">
+                    <h2>Pending Orders</h2>
+                    <div id="pendingOrdersContainer" class="orders-table-wrapper">
+                        <p>Loading pending orders...</p>
+                    </div>
+                </div>
+
+                <!-- Confirmed Orders Section -->
+                <div id="confirmed-section" class="admin-section" style="display:none;">
+                    <h2>Confirmed Orders</h2>
+                    <div id="confirmedOrdersContainer" class="orders-table-wrapper">
+                        <p>Loading confirmed orders...</p>
+                    </div>
+                </div>
+
+                <!-- Statistics Section -->
+                <div id="stats-section" class="admin-section" style="display:none;">
+                    <h2>Order Statistics</h2>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <h3>Total Orders</h3>
+                            <p class="stat-number" id="totalOrders">0</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>Pending</h3>
+                            <p class="stat-number" id="pendingCount">0</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>Confirmed</h3>
+                            <p class="stat-number" id="confirmedCount">0</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3>Total Revenue</h3>
+                            <p class="stat-number" id="totalRevenue">$0</p>
+                        </div>
+                    </div>
+
+                    <div class="stats-charts">
+                        <div class="chart-container">
+                            <h3>Orders by Frame Color</h3>
+                            <div id="colorChart" class="chart"></div>
+                        </div>
+                        <div class="chart-container">
+                            <h3>Orders by Size</h3>
+                            <div id="sizeChart" class="chart"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Order Detail Modal -->
+    <div id="orderModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Order Details</h2>
+            <div id="orderDetailContent">
+                <!-- Details will be loaded here -->
+            </div>
+            <div class="modal-actions">
+                <select id="statusSelect" class="form-control">
+                    <option value="pending">Pending</option>
+                    <option value="confirmed">Confirmed</option>
+                    <option value="shipped">Shipped</option>
+                    <option value="delivered">Delivered</option>
+                </select>
+                <button class="btn btn-primary" onclick="updateOrderStatus()">Update Status</button>
+                <button class="btn btn-secondary" onclick="closeModal()">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Linga Frame Shop. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/admin.js"></script>
+</body>
+
+</html>
